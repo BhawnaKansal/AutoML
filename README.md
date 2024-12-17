@@ -1,14 +1,14 @@
 # AutoML
 ➢ Introduction 
   1. Fine-tuning machine learning models is significantly enhanced by hyperparameter  optimization. 
-  2. Hyperparameters are adjustable settings that control the model’s learning from data. 3. These settings are fixed before training starts, unlike model parameters which are  learned during training. 
+  2. Hyperparameters are adjustable settings that control the model’s learning from data. These settings are fixed before training starts, unlike model parameters which are  learned during training. 
   4. Skilful hyperparameter tuning can greatly boost a model’s performance.
   5. The Bayesian Optimization method for hyperparameter refinement is the focus of this  document. 
   6. Additionally, the Tree-structured Parzen Estimator (TPE) method has also been  utilized for hyperparameter optimization. 
-  7. A comparison has been made between Hyper opt and Bayesian optimization  and TPE optimization techniques, including an analysis of their learning rates.
+  7. A comparison has been made between Hyper opt, Bayesian optimization  and TPE optimization techniques, including an analysis of their learning rates.
 
 ➢ Hyperparameters 
-  1.Hyperparameters are configuration settings used to tune the training     process of machine learning models.
+  1.Hyperparameters are configuration settings used to tune the training process of machine learning models.
   2.Unlike model parameters learned during training, hyperparameters are set before training begins. 
   3. Hyperparameters guide the training algorithm. 
   4. They significantly influence the model's performance, learning speed, and generalization ability.
@@ -77,13 +77,11 @@ This code aims to optimize a Random Forest Classifier for predicting outcomes us
 ➢ Implementation 
   • Step 1: Define the Objective Function: 
     o Our goal for optimization is to minimize the negative mean accuracy of a  Random Forest Classifier. 
-    o This means our objective function will measure and return the negative of the  mean accuracy to align with the minimization process. Below is a code snippet  illustrating the objective function
+    o This means our objective function will measure and return the negative of the  mean accuracy to align with the minimization process.
   • Step 2: Define the Hyperparameter Space: 
     o We need to outline the range and possible values for the hyperparameters we want to  optimize. 
-    o The following code snippet demonstrates the search space for various hyperparameters that will be used in the optimization process.
   • Step 3: Execute the Optimization Algorithm: 
     o Use the optimization algorithm to search for the best possible hyperparameters within  the defined search space. 
-    o The following code snippet illustrates how to run the optimization algorithm to  identify the optimal hyperparameters. 
   • Step 4: Evaluate the Results: 
     o Once optimization is complete, assess the performance of the best-found  model. 
     o This involves calculating metrics like ROC-AUC scores and conducting cross validation to ensure robust evaluation.
